@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_sip_users"
+name="SIP users"
+res_model="sip.users"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_sip_users"
+name="SIP users"
+parent="menu_asterisk"
+action="action_sip_users" />
+    <record id="view_tree_sip_users" model="ir.ui.view">
+        <field name="name">SIP users Tree</field>
+        <field name="model">sip.users</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="extension"/>
+                <field name="context"/>
+                <field name="defaultuser"/>
+                <field name="description"/>
+            </tree>
+           </field>
+    </record>
+    
+    <record id="view_form_sip_users" model="ir.ui.view">
+        <field name="name">SIP users Form</field>
+        <field name="model">sip.users</field>
+        <field name="arch" type="xml">
+            <form string="SIP Users">
+            <group>
+                    <field name="extension"/>
+                    <field name="context"/>
+                    <field name="defaultuser"/>
+                    <field name="secret"/>
+                    <field name="description"/>
+            </group>
+            </form>
+        </field>
+    </record>
+</odoo>

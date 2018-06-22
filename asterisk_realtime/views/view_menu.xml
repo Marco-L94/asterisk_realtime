@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_asterisk"
+name="Asterisk"/>
+</odoo>

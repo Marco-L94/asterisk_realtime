@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_call_forward"
+name="Call Forward"
+res_model="call.forward"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_call_forward"
+name="Call forward"
+parent="menu_asterisk"
+action="action_call_forward" />
+
+<record id="view_tree_call_forward" model="ir.ui.view">
+        <field name="name">Call forward Tree</field>
+        <field name="model">call.forward</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="description"/>
+                <field name="created"/>
+            </tree>
+           </field>
+    </record>
+    <record id="view_form_call_forward" model="ir.ui.view">
+        <field name="name">Call Forward Form</field>
+        <field name="model">call.forward</field>
+        <field name="arch" type="xml">
+            <form string="Call forward">
+                <group>
+                    <field name="forwardto"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

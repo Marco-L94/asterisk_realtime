@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_call_groups"
+name="Call groups"
+res_model="call.groups"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_call_groups"
+name="Call groups"
+parent = "menu_asterisk"
+action="action_call_groups" />
+
+<record id="view_tree_call_groups" model="ir.ui.view">
+        <field name="name">Call groups Tree</field>
+        <field name="model">call.groups</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="callgroupextension"/>
+                <field name="context"/>
+                <field name="ringtime"/>
+                <field name="extensions"/>
+                <field name="enabled"/>
+            </tree>
+           </field>
+    </record>
+
+
+    <record id="view_form_call_groups" model="ir.ui.view">
+        <field name="name">Call groups Form</field>
+        <field name="model">call.groups</field>
+        <field name="arch" type="xml">
+            <form string="Call groups">
+                <group>
+                    <field name="callgroupextension"/>
+                    <field name="context"/>
+                    <field name="grouptype"/>
+                    <field name="ringtime"/>
+                    <field name="extensions"/>
+                    <field name="enabled"/>
+                    <!---<field name="destination" attrs="{'invisible':['|', '|', '|', '|', ('destination1','!=',False),('destination2','!=',False), ('destination3','!=',False), ('destination4','!=',False)]}" />   
+                    <field name="destination1" attrs="{'invisible':['|', '|', '|', '|', ('destination','!=',False),('destination2','!=',False), ('destination3','!=',False), ('destination4','!=',False)]}" />              
+                    <field name="destination2" attrs="{'invisible':['|', '|', '|', '|', ('destination1','!=',False),('destination','!=',False), ('destination3','!=',False), ('destination4','!=',False)]}" />
+                    <field name="destination3" attrs="{'invisible':['|', '|', '|', '|', ('destination1','!=',False),('destination2','!=',False), ('destination','!=',False), ('destination4','!=',False)]}" />
+                    <field name="destination4" attrs="{'invisible':['|', '|', '|', '|', ('destination1','!=',False),('destination2','!=',False), ('destination3','!=',False), ('destination','!=',False)]}" />
+                    -->
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>
+
+

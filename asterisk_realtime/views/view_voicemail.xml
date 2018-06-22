@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_voice_mail"
+name="Voicemail"
+res_model="voice.mail"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_voice_mail"
+name="Voicemail"
+parent = "menu_asterisk"
+action="action_voice_mail" />
+<record id="view_tree_voice_mail" model="ir.ui.view">
+        <field name="name">Voicemail Tree</field>
+        <field name="model">voice.mail</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="voicemailextension"/>
+                 <field name="context"/>
+                 <field name="messages"/>
+                 <field name="fullname"/>
+                 <field name="email"/>
+            </tree>
+           </field>
+    </record>
+    <record id="view_form_voice_mail" model="ir.ui.view">
+        <field name="name">Voicemail Form</field>
+        <field name="model">voice.mail</field>
+        <field name="arch" type="xml">
+            <form string="Voice_mail">
+                <group>
+                    <field name="context"/>
+                    <field name="voicemailextension"/>                    
+                    <field name="pin"/>
+                    <field name="fullname"/>
+                    <field name="email"/>
+                    <field name="messages"/>
+                    <field name="attachment"/>
+                    <field name="maximummessages"/>
+                    <field name="enabled"/>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

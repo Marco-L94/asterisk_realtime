@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_dialplan_outbound"
+name="Outbound routes"
+res_model="dialplan.outbound"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_dialplan_outbound"
+name="Outbound routes"
+parent = "menu_asterisk"
+action="action_dialplan_outbound" />
+<record id="view_tree_dialplan_outbound" model="ir.ui.view">
+        <field name="name">dialplan outbound Tree</field>
+        <field name="model">dialplan.outbound</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="description"/>
+            </tree>
+           </field>
+    </record>
+    <record id="view_form_dialplan_outbound" model="ir.ui.view">
+        <field name="name">dialplan outbound Form</field>
+        <field name="model">dialplan.outbound</field>
+        <field name="arch" type="xml">
+            <form string="Dialplan">
+                <group>
+                    <field name="description"/>
+                    <field name="context"/>
+                    <field name="did"/>
+                    <field name="dialpatterns"/>
+                    <field name="destination"/> 
+                </group>
+            </form>
+        </field>
+    </record>
+<act_window id="action_dial_patterns"
+name="Dial patterns"
+res_model="dial.patterns"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_dial_patterns"
+name="Dial patterns"
+parent = "menu_asterisk"
+action="action_dial_patterns" />
+     
+     
+     <record id="view_tree_dial_patterns" model="ir.ui.view">
+        <field name="name">Dial patterns Tree</field>
+        <field name="model">dial.patterns</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="dialpatterns"/>
+            </tree>
+       </field>
+     </record>
+     
+     <record id="view_form_dial_patterns" model="ir.ui.view">
+        <field name="name">Dial patterns Form</field>
+        <field name="model">dial.patterns</field>
+        <field name="arch" type="xml">
+            <form string="dialpatterns">
+                <group>
+                    <field name="dialpatterns"/>
+                          </group>
+            </form>
+        </field>
+    </record>     
+</odoo>

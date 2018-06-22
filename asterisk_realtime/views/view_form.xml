@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_sip_users"
+name="SIP users"
+res_model="sip.users"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_sip_users"
+name="SIP users"
+parent="menu_asterisk"
+action="action_sip_users" />
+
+<record model="ir.ui.view" id="view_form_overview">
+        <field name="name">asterisk sip peer status list</field>
+        <field name="model">sip.users</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false">
+                <field name="peer"/>
+                <field name="status"/>
+                <field name="cause"/>
+                <field name="address"/>
+                <field name="created"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

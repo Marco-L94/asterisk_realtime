@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Action to open To-do Task list -->
+<act_window id="action_dialplan_inbound"
+name="Inbound routes"
+res_model="dialplan.inbound"
+view_mode="tree,form" />
+<!-- Menu item to open To-do Task list -->
+<menuitem id="menu_dialplan_inbound"
+name="Inbound routes"
+parent = "menu_asterisk"
+action="action_dialplan_inbound" />
+<record id="view_tree_dialplan_inbound" model="ir.ui.view">
+        <field name="name">dialplan inbound Tree</field>
+        <field name="model">dialplan.inbound</field>
+        <field name="arch" type="xml">
+            <tree create="true" edit="true">
+                <field name="did"/>
+                <field name="context"/>
+                <field name="destination"/>
+                <field name="description"/>
+            </tree>
+       </field>
+    </record>
+    
+    <record id="view_form_dialplan_inbound" model="ir.ui.view">
+        <field name="name">dialplan inbound Form</field>
+        <field name="model">dialplan.inbound</field>
+        <field name="arch" type="xml">
+            <form string="dialplan">
+                <group>
+                    <field name="description"/>
+                    <field name="context"/>
+                    <field name="did"/>
+                    <field name="priority"/>
+                    <field name="destination"/>
+               </group>
+            </form>
+        </field>
+    </record>
+</odoo>
