@@ -29,11 +29,10 @@
 	'depends': ['base'],
 	'application': True,
 	'data': [
-	    'security/ir.model.access.csv',
-	    
 	    'views/view_menu.xml',
-	    'security/groups_dropdown.xml',
+            'security/groups_dropdown.xml',
 	    'security/groups.xml',
+            'security/ir.model.access.csv',
         'views/view_users.xml',
         'views/view_trunks.xml',
         'views/view_dialplan_inbound.xml',
