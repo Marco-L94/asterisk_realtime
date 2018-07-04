@@ -1,20 +1,19 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_call_groups_manager,Model admin access,model_call_groups,asterisk_realtime.group_manager,1,1,1,1
-access_call_groups_user,Model user access,model_call_groups,base.group_user,1,0,0,0
+access_call_groups_user,Model user access,model_call_groups,asterisk_realtime.group_user,1,0,0,0
 access_call_forward_manager,Model admin access,model_call_forward,asterisk_realtime.group_manager,1,1,1,1
-access_call_forward_user,Model user access,model_call_forward,base.group_user,1,0,0,0
+access_call_forward_user,Model user access,model_call_forward,asterisk_realtime.group_user,1,0,0,0
 access_sip_users_manager,Model admin access,model_sip_users,asterisk_realtime.group_manager,1,1,1,1
-access_sip_users_user,Model user access,model_sip_users,base.group_user,1,0,0,0
+access_sip_users_user,Model user access,model_sip_users,asterisk_realtime.group_user,1,0,0,0
 access_sip_trunks_manager,Model admin access,model_sip_trunks,asterisk_realtime.group_manager,1,1,1,1
-access_sip_trunks_user,Model user access,model_sip_trunks,base.group_user,1,0,0,0
+access_sip_trunks_user,Model user access,model_sip_trunks,asterisk_realtime.group_user,1,0,0,0
 access_voice_mail_manager,Model admin access,model_voice_mail,asterisk_realtime.group_manager,1,1,1,1
-access_voice_mail_user,Model user access,model_voice_mail,base.group_user,1,0,0,0
+access_voice_mail_user,Model user access,model_voice_mail,asterisk_realtime.group_user,1,0,0,0
 access_dialplan_inbound_manager,Model admin access,model_dialplan_inbound,asterisk_realtime.group_manager,1,1,1,1
-access_dialplan_inbound_user,Model user access,model_dialplan_inbound,base.group_user,1,0,0,0
+access_dialplan_inbound_user,Model user access,model_dialplan_inbound,asterisk_realtime.group_user,1,0,0,0
 access_dialplan_outbound_manager,Model admin access,model_dialplan_outbound,asterisk_realtime.group_manager,1,1,1,1
-access_dialplan_outbound_user,Model user access,model_dialplan_outbound,base.group_user,1,0,0,0
+access_dialplan_outbound_user,Model user access,model_dialplan_outbound,asterisk_realtime.group_user,1,0,0,0
 access_dial_patterns_manager,Model admin access,model_dial_patterns,asterisk_realtime.group_manager,1,1,1,1
-access_dial_patterns_user,Model user access,model_dial_patterns,base.group_user,1,0,0,0
-
+access_dial_patterns_user,Model user access,model_dial_patterns,asterisk_realtime.group_user,1,0,0,0
 
